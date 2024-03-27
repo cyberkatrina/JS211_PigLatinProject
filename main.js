@@ -12,8 +12,18 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word) => {
-
   // Your code here
+  let wordArray = word.split('')
+  for (let i = 0; i < wordArray.length; i++) {
+    if (wordArray[i] == 'a'|| wordArray[i] == 'e'|| wordArray[i] == 'i'|| wordArray[i] == 'o'|| wordArray[i] == 'u') {
+      firstLetter = wordArray.shift()
+      wordArray.push(firstLetter)
+    }
+    else {
+      wordArray.push('ay')
+      return wordArray.join('')
+    }
+  }
 
 }
 
